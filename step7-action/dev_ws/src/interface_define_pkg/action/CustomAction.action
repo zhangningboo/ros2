@@ -1,0 +1,5 @@
+bool enable  # 目标
+---
+bool finish  # 结果
+---
+int32 state  # 反馈
