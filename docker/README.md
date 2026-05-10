@@ -29,14 +29,31 @@ localhost/ros2-humble-amd64                                        ubuntu22.04  
     $ podman run -it --rm \
         -e DISPLAY=host.containers.internal:0 \
         -v $HOME/.Xauthority:/root/.Xauthority \
+        -p 5900:5900 \
         --name ros2-humble-amd64-ubuntu22.04 \
-        localhost/ros2-humble-amd64:ubuntu22.04 zsh
+        registry.cn-hangzhou.aliyuncs.com/zhangningboo/linux_amd64_ros2_humble:ubuntu22.04 \
+        zsh
     # 容器内启动小乌龟
     $ ros2 run turtlesim turtlesim_node
     ```
-    - docker
-        ```shell
-        $ docker run -itd --network=host --privileged --group-add video --gpus=all --isolation=process --name ros2-humble-v1 ros2-humble-v1 /bin/zsh
-        $ docker run -itd --privileged -e DISPLAY=${REPLACE_YOUR_IP}:0.0 --shm-size 16G --name ros2-humble-v1 ros2-humble-v1 /bin/zsh
-        $ docker run -itd --privileged -e DISPLAY=192.168.3.2:0.0 --shm-size 16G --name ros2-humble-v1 ros2-humble-v1 /bin/zsh
-        ```
+    - podman vnc
+    ```shell
+    $ podman run -it --rm \
+        -e DISPLAY=host.containers.internal:0 \
+        -v $HOME/.Xauthority:/root/.Xauthority \
+        -p 5900:5900 \
+        --name ros2-humble-amd64-ubuntu22.04-vnc \
+        registry.cn-hangzhou.aliyuncs.com/zhangningboo/linux_amd64_ros2_humble:ubuntu22.04 \
+        zsh
+    $ sudo apt-get update
+	$ sudo apt-get install -y xvfb x11vnc openbox
+    # 将 DISPLAY 环境变量指向虚拟显示器
+	$ export DISPLAY=:1
+    # 声明软件渲染和运行时目录
+	$ export LIBGL_ALWAYS_SOFTWARE=1
+	$ export XDG_RUNTIME_DIR=/tmp/runtime-root
+    $ x11vnc -display :1 -forever -rfbport 5900 -passwd 123456 &
+    # 在mac上，打开 Finder 中前往 -> 连接服务器，地址：vnc://localhost:5900
+    # 回到容器
+    $ rviz2
+    ```
