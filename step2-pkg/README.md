@@ -2,7 +2,7 @@
 
 
 ### 基础环境
-```shell
+step3-node```shell
 $ pip3 install rosdepc
 $ pip3 install colcon-cargo
 $ sudo rosdepc init
