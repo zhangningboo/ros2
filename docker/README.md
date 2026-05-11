@@ -26,10 +26,11 @@ localhost/ros2-humble-amd64                                        ubuntu22.04  
     - podman
     ```shell
     $ MAC_IP=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
-    $ podman run -it --rm \
+    $ podman run -itd \
         -e DISPLAY=host.containers.internal:0 \
         -v $HOME/.Xauthority:/root/.Xauthority \
         -p 5900:5900 \
+        -p 2222:22 \
         --name ros2-humble-amd64-ubuntu22.04 \
         registry.cn-hangzhou.aliyuncs.com/zhangningboo/linux_amd64_ros2_humble:ubuntu22.04 \
         zsh
@@ -45,14 +46,15 @@ localhost/ros2-humble-amd64                                        ubuntu22.04  
         --name ros2-humble-amd64-ubuntu22.04-vnc \
         registry.cn-hangzhou.aliyuncs.com/zhangningboo/linux_amd64_ros2_humble:ubuntu22.04 \
         zsh
-    $ sudo apt-get update
-	$ sudo apt-get install -y xvfb x11vnc openbox
+    $ sudo apt update
+	$ sudo apt install -y xvfb x11vnc openbox
     # 将 DISPLAY 环境变量指向虚拟显示器
 	$ export DISPLAY=:1
     # 声明软件渲染和运行时目录
 	$ export LIBGL_ALWAYS_SOFTWARE=1
 	$ export XDG_RUNTIME_DIR=/tmp/runtime-root
-    $ x11vnc -display :1 -forever -rfbport 5900 -passwd 123456 &
+    $ sudo Xvfb :1 -screen 0 1920x1080x24 &
+    $ sudo x11vnc -display :1 -forever -rfbport 5900 -passwd 123456 &
     # 在mac上，打开 Finder 中前往 -> 连接服务器，地址：vnc://localhost:5900
     # 回到容器
     $ rviz2
