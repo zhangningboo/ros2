@@ -50,7 +50,7 @@ RUN apt autoremove \
     && rm -rf /var/lib/apt/lists/*
 USER ubuntu
 WORKDIR /home/ubuntu
-RUN git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh \  
+RUN git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh \
     && git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions \
     && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting \
     && cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc \
