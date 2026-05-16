@@ -41,7 +41,8 @@ RUN apt install -y python3-pip python3-colcon-common-extensions ros-humble-deskt
 # 安装Moveit
 RUN apt install -y ros-humble-moveit* \
     && apt install -y ros-humble-rviz* \
-    && apt install -y ros-humble-urdf-launch
+    && apt install -y ros-humble-urdf-launch \
+    && apt install -y ros-humble-ros2launch
     
 # 安装ZSH
 RUN apt update \
