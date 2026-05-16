@@ -1,5 +1,13 @@
 # ros2
 
+### ros2包安装
+```shell
+$ sudo apt install ros-humble-ros2run
+$ sudo apt install ros-humble-turtlesim
+$ sudo apt install python3-pip
+$ sudo apt install python3-rosdep2
+```
+
 ### 常用命令
 | 命令| 作用 |
 | --- | --- |

@@ -42,7 +42,10 @@ RUN apt install -y python3-pip python3-colcon-common-extensions ros-humble-deskt
 RUN apt install -y ros-humble-moveit* \
     && apt install -y ros-humble-rviz* \
     && apt install -y ros-humble-urdf-launch \
-    && apt install -y ros-humble-ros2launch
+    && apt install -y ros-humble-ros2launch \
+    && apt install -y ros-humble-xacro \
+    && apt install ros-humble-ros2run \
+    && apt install -y ros-humble-rqt*
     
 # 安装ZSH
 RUN apt update \

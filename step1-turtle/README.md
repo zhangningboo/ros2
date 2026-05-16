@@ -2,6 +2,8 @@
 
 #### 启动 turtlesim 节点
 ```shell
+$ sudo apt install ros-humble-ros2run
+$ sudo apt install ros-humble-turtlesim
 $ ros2 run turtlesim turtlesim_node
 ```
 
