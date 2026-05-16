@@ -2,9 +2,10 @@
 
 ### 基础环境
 ```shell
-$ pip install rosdepc
-$ rosdepc init
-$ rosdepc update
+$ sudo apt install python3-pip
+$ sudo apt install python3-rosdep2
+$ pip3 install colcon-cargo colcon-ros-cargo
+$ sudo apt install ros-humble-example-interfaces ros-humble-test-msgs
 ```
 
 ### 创建工作空间
@@ -16,7 +17,7 @@ $ colcon build
 $ source install/local_setup.bash
 ```
 
-#### 创建包
+### 创建python包
 ```shell
 $ cd dev_ws/src
 $ ros2 pkg create --build-type ament_python hello_pkg
@@ -31,4 +32,10 @@ $ source install/local_setup.bash
 $ ros2 run hello_pkg node_helloworld
 $ ros2 run hello_pkg node_objectdetect
 ```
-
+### 创建rust包
+```shell
+$ ros2 pkg create --build-type ament_cargo hello_pkg_rs
+$ colcon build
+$ source install/local_setup.bash
+$ ros2 run hello_pkg_rs hello_pkg_rs
+```

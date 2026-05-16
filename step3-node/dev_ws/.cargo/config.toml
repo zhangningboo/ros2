@@ -1,0 +1,113 @@
+[patch.crates-io.rosbag2_interfaces]
+path = "/opt/ros/humble/share/rosbag2_interfaces/rust"
+
+[patch.crates-io.unique_identifier_msgs]
+path = "/opt/ros/humble/share/unique_identifier_msgs/rust"
+
+[patch.crates-io.rmw_dds_common]
+path = "/opt/ros/humble/share/rmw_dds_common/rust"
+
+[patch.crates-io.rcl_interfaces]
+path = "/opt/ros/humble/share/rcl_interfaces/rust"
+
+[patch.crates-io.play_motion_builder_msgs]
+path = "/opt/ros/humble/share/play_motion_builder_msgs/rust"
+
+[patch.crates-io.turtlesim]
+path = "/opt/ros/humble/share/turtlesim/rust"
+
+[patch.crates-io.nav_msgs]
+path = "/opt/ros/humble/share/nav_msgs/rust"
+
+[patch.crates-io.std_msgs]
+path = "/opt/ros/humble/share/std_msgs/rust"
+
+[patch.crates-io.sensor_msgs]
+path = "/opt/ros/humble/share/sensor_msgs/rust"
+
+[patch.crates-io.mocap4r2_control_msgs]
+path = "/opt/ros/humble/share/mocap4r2_control_msgs/rust"
+
+[patch.crates-io.visualization_msgs]
+path = "/opt/ros/humble/share/visualization_msgs/rust"
+
+[patch.crates-io.moveit_msgs]
+path = "/opt/ros/humble/share/moveit_msgs/rust"
+
+[patch.crates-io.lifecycle_msgs]
+path = "/opt/ros/humble/share/lifecycle_msgs/rust"
+
+[patch.crates-io.action_msgs]
+path = "/opt/ros/humble/share/action_msgs/rust"
+
+[patch.crates-io.geometry_msgs]
+path = "/opt/ros/humble/share/geometry_msgs/rust"
+
+[patch.crates-io.composition_interfaces]
+path = "/opt/ros/humble/share/composition_interfaces/rust"
+
+[patch.crates-io.builtin_interfaces]
+path = "/opt/ros/humble/share/builtin_interfaces/rust"
+
+[patch.crates-io.object_recognition_msgs]
+path = "/opt/ros/humble/share/object_recognition_msgs/rust"
+
+[patch.crates-io.graph_msgs]
+path = "/opt/ros/humble/share/graph_msgs/rust"
+
+[patch.crates-io.statistics_msgs]
+path = "/opt/ros/humble/share/statistics_msgs/rust"
+
+[patch.crates-io.diagnostic_msgs]
+path = "/opt/ros/humble/share/diagnostic_msgs/rust"
+
+[patch.crates-io.rviz_2d_overlay_msgs]
+path = "/opt/ros/humble/share/rviz_2d_overlay_msgs/rust"
+
+[patch.crates-io.trajectory_msgs]
+path = "/opt/ros/humble/share/trajectory_msgs/rust"
+
+[patch.crates-io.test_msgs]
+path = "/opt/ros/humble/share/test_msgs/rust"
+
+[patch.crates-io.example_interfaces]
+path = "/opt/ros/humble/share/example_interfaces/rust"
+
+[patch.crates-io.stereo_msgs]
+path = "/opt/ros/humble/share/stereo_msgs/rust"
+
+[patch.crates-io.actionlib_msgs]
+path = "/opt/ros/humble/share/actionlib_msgs/rust"
+
+[patch.crates-io.mbf_msgs]
+path = "/opt/ros/humble/share/mbf_msgs/rust"
+
+[patch.crates-io.rosgraph_msgs]
+path = "/opt/ros/humble/share/rosgraph_msgs/rust"
+
+[patch.crates-io.controller_manager_msgs]
+path = "/opt/ros/humble/share/controller_manager_msgs/rust"
+
+[patch.crates-io.control_msgs]
+path = "/opt/ros/humble/share/control_msgs/rust"
+
+[patch.crates-io.std_srvs]
+path = "/opt/ros/humble/share/std_srvs/rust"
+
+[patch.crates-io.octomap_msgs]
+path = "/opt/ros/humble/share/octomap_msgs/rust"
+
+[patch.crates-io.moveit_task_constructor_msgs]
+path = "/opt/ros/humble/share/moveit_task_constructor_msgs/rust"
+
+[patch.crates-io.play_motion2_msgs]
+path = "/opt/ros/humble/share/play_motion2_msgs/rust"
+
+[patch.crates-io.tf2_msgs]
+path = "/opt/ros/humble/share/tf2_msgs/rust"
+
+[patch.crates-io.map_msgs]
+path = "/opt/ros/humble/share/map_msgs/rust"
+
+[patch.crates-io.shape_msgs]
+path = "/opt/ros/humble/share/shape_msgs/rust"

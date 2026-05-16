@@ -6,6 +6,27 @@ $ sudo apt install ros-humble-ros2run
 $ sudo apt install ros-humble-turtlesim
 $ sudo apt install python3-pip
 $ sudo apt install python3-rosdep2
+$ pip3 install colcon-cargo colcon-ros-cargo
+$ sudo apt install ros-humble-example-interfaces ros-humble-test-msgs
+```
+
+### python uv
+```shell
+$ export UV_DOWNLOAD_PROXY="https://gh-proxy.com"
+$ export UV_PYPI_MIRROR="https://mirrors.ustc.edu.cn/pypi/simple"
+$ curl -LsSf https://astral.sh/uv/install.sh | sh
+
+$ uv venv --python 3.10 --seed --managed-python
+$ source .venv/bin/activate
+```
+
+### rust
+```shell
+# 用于更新 toolchain
+$ export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
+# 用于更新 rustup
+$ export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
+$ curl --proto '=https' --tlsv1.2 -sSf https://mirrors.ustc.edu.cn/misc/rustup-install.sh | sh
 ```
 
 ### 常用命令
