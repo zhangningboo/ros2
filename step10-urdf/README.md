@@ -3,6 +3,8 @@
 
 ### 基础环境
 ```shell
+$ sudo apt install python3-pip
+$ sudo apt install python3-rosdep2
 $ pip install rosdepc
 $ rosdepc init
 $ rosdepc update
@@ -13,6 +15,8 @@ $ rosdepc install urdf_launch
 ```shell
 $ sudo apt install ros-humble-urdf-launch
 $ cd dev_ws/src
+$ git submodule update --remote
+# or
 $ git clone https://github.com/ros/urdf_tutorial.git -b ros2 
 $ cd ..
 $ colcon build
