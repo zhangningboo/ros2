@@ -32,7 +32,7 @@ RUN apt install -y curl gnupg2 \
     && echo "TZ='Asia/Shanghai'; export TZ" >> /etc/profile
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # 安装ROS
-RUN apt install -y python3-colcon-common-extensions ros-humble-desktop-full \
+RUN apt install -y python3-pip python3-colcon-common-extensions ros-humble-desktop-full \
     && chmod +x /opt/ros/humble/*.sh \
     && chmod +x /opt/ros/humble/*.bash \
     && chmod +x /opt/ros/humble/*.zsh \
@@ -40,7 +40,9 @@ RUN apt install -y python3-colcon-common-extensions ros-humble-desktop-full \
     && echo "source /opt/ros/humble/setup.bash" >> /etc/profile
 # 安装Moveit
 RUN apt install -y ros-humble-moveit* \
-    && apt install -y ros-humble-rviz*
+    && apt install -y ros-humble-rviz* \
+    && apt install -y ros-humble-urdf-launch
+    
 # 安装ZSH
 RUN apt update \
     && apt install -y net-tools build-essential vim curl git zsh lsb-release locales bash-completion
@@ -57,8 +59,14 @@ RUN git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh \
     && sed -i "s/robbyrussell/ys/" ~/.zshrc \
     && sed -i "s/plugins=(git.*)$/plugins=(git zsh-syntax-highlighting zsh-autosuggestions)/" ~/.zshrc \
     && echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc \
-    && echo "setopt nonomatch" >>  ~/.zshrc \
+    && echo "export ROS_DISTRO=humble" >> ~/.bashrc \
+    && echo "export LOCAL=/home/ubuntu/.local"  >> ~/.bashrc \
+    && echo "export PATH=${LOCAL}/bin:${PATH}"  >> ~/.bashrc \
+    && echo "setopt nonomatch" >> ~/.zshrc \
     && echo "source /opt/ros/humble/setup.zsh" >> ~/.zshrc \
+    && echo "export ROS_DISTRO=humble" >> ~/.zshrc \
+    && echo "export LOCAL=/home/ubuntu/.local"  >> ~/.zshrc \
+    && echo "export PATH=${LOCAL}/bin:${PATH}"  >> ~/.zshrc \
     && echo "set nu" >> ~/.vimrc
 ADD .gitconfig /home/ubuntu/
 # 声明容器会监听的端口
