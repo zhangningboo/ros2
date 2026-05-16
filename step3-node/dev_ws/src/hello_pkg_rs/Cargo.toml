@@ -13,7 +13,7 @@ anyhow = {version = "1", features = ["backtrace"]}
 rclrs = "*"
 
 # This specific version is compatible with Rust 1.75
-backtrace = "=0.3.74"
+backtrace = "=0.3.76"
 
 # uncomment the following section in order to fill in
 # further dependencies manually.
