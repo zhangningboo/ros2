@@ -1,0 +1,314 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"base_footprint" [label="base_footprint"];
+"omni_chassis_base_link" [label="omni_chassis_base_link"];
+"chassis_lidar" [label="chassis_lidar"];
+"omni_chassis_leg_mount_link" [label="omni_chassis_leg_mount_link"];
+"leg_base_link" [label="leg_base_link"];
+"leg_link1" [label="leg_link1"];
+"leg_link2" [label="leg_link2"];
+"leg_link3" [label="leg_link3"];
+"leg_link4" [label="leg_link4"];
+"leg_link5" [label="leg_link5"];
+"leg_end_effector_mount_link" [label="leg_end_effector_mount_link"];
+"torso_base_link" [label="torso_base_link"];
+"torso_head_mount_link" [label="torso_head_mount_link"];
+"head_base_link" [label="head_base_link"];
+"head_link1" [label="head_link1"];
+"head_link2" [label="head_link2"];
+"head_end_effector_mount_link" [label="head_end_effector_mount_link"];
+"torso_left_arm_mount_link" [label="torso_left_arm_mount_link"];
+"left_arm_base_link" [label="left_arm_base_link"];
+"left_arm_link1" [label="left_arm_link1"];
+"left_arm_link2" [label="left_arm_link2"];
+"left_arm_link3" [label="left_arm_link3"];
+"left_arm_link4" [label="left_arm_link4"];
+"left_arm_link5" [label="left_arm_link5"];
+"left_arm_link6" [label="left_arm_link6"];
+"left_arm_link7" [label="left_arm_link7"];
+"left_arm_wrist_camera_stand" [label="left_arm_wrist_camera_stand"];
+"left_wrist_camera_link" [label="left_wrist_camera_link"];
+"left_arm_end_effector_mount_link" [label="left_arm_end_effector_mount_link"];
+"left_gripper_flange_link" [label="left_gripper_flange_link"];
+"left_gripper_base_link" [label="left_gripper_base_link"];
+"left_gripper_r_knuckle_link" [label="left_gripper_r_knuckle_link"];
+"left_gripper_l_inner_knuckle_link" [label="left_gripper_l_inner_knuckle_link"];
+"left_gripper_l_finger_link" [label="left_gripper_l_finger_link"];
+"left_gripper_l_knuckle_link" [label="left_gripper_l_knuckle_link"];
+"left_gripper_r_inner_knuckle_link" [label="left_gripper_r_inner_knuckle_link"];
+"left_gripper_r_finger_link" [label="left_gripper_r_finger_link"];
+"left_gripper_tcp_link" [label="left_gripper_tcp_link"];
+"torso_right_arm_mount_link" [label="torso_right_arm_mount_link"];
+"right_arm_base_link" [label="right_arm_base_link"];
+"right_arm_link1" [label="right_arm_link1"];
+"right_arm_link2" [label="right_arm_link2"];
+"right_arm_link3" [label="right_arm_link3"];
+"right_arm_link4" [label="right_arm_link4"];
+"right_arm_link5" [label="right_arm_link5"];
+"right_arm_link6" [label="right_arm_link6"];
+"right_arm_link7" [label="right_arm_link7"];
+"right_arm_wrist_camera_stand" [label="right_arm_wrist_camera_stand"];
+"right_wrist_camera_link" [label="right_wrist_camera_link"];
+"right_arm_end_effector_mount_link" [label="right_arm_end_effector_mount_link"];
+"right_gripper_flange_link" [label="right_gripper_flange_link"];
+"right_gripper_base_link" [label="right_gripper_base_link"];
+"right_gripper_r_knuckle_link" [label="right_gripper_r_knuckle_link"];
+"right_gripper_l_inner_knuckle_link" [label="right_gripper_l_inner_knuckle_link"];
+"right_gripper_l_finger_link" [label="right_gripper_l_finger_link"];
+"right_gripper_l_knuckle_link" [label="right_gripper_l_knuckle_link"];
+"right_gripper_r_inner_knuckle_link" [label="right_gripper_r_inner_knuckle_link"];
+"right_gripper_r_finger_link" [label="right_gripper_r_finger_link"];
+"right_gripper_tcp_link" [label="right_gripper_tcp_link"];
+"wheel_1" [label="wheel_1"];
+"wheel_1_passive_0" [label="wheel_1_passive_0"];
+"wheel_1_passive_1" [label="wheel_1_passive_1"];
+"wheel_1_passive_2" [label="wheel_1_passive_2"];
+"wheel_1_passive_3" [label="wheel_1_passive_3"];
+"wheel_1_passive_4" [label="wheel_1_passive_4"];
+"wheel_1_passive_5" [label="wheel_1_passive_5"];
+"wheel_1_passive_6" [label="wheel_1_passive_6"];
+"wheel_1_passive_7" [label="wheel_1_passive_7"];
+"wheel_1_passive_8" [label="wheel_1_passive_8"];
+"wheel_1_passive_9" [label="wheel_1_passive_9"];
+"wheel_2" [label="wheel_2"];
+"wheel_2_passive_0" [label="wheel_2_passive_0"];
+"wheel_2_passive_1" [label="wheel_2_passive_1"];
+"wheel_2_passive_2" [label="wheel_2_passive_2"];
+"wheel_2_passive_3" [label="wheel_2_passive_3"];
+"wheel_2_passive_4" [label="wheel_2_passive_4"];
+"wheel_2_passive_5" [label="wheel_2_passive_5"];
+"wheel_2_passive_6" [label="wheel_2_passive_6"];
+"wheel_2_passive_7" [label="wheel_2_passive_7"];
+"wheel_2_passive_8" [label="wheel_2_passive_8"];
+"wheel_2_passive_9" [label="wheel_2_passive_9"];
+"wheel_3" [label="wheel_3"];
+"wheel_3_passive_0" [label="wheel_3_passive_0"];
+"wheel_3_passive_1" [label="wheel_3_passive_1"];
+"wheel_3_passive_2" [label="wheel_3_passive_2"];
+"wheel_3_passive_3" [label="wheel_3_passive_3"];
+"wheel_3_passive_4" [label="wheel_3_passive_4"];
+"wheel_3_passive_5" [label="wheel_3_passive_5"];
+"wheel_3_passive_6" [label="wheel_3_passive_6"];
+"wheel_3_passive_7" [label="wheel_3_passive_7"];
+"wheel_3_passive_8" [label="wheel_3_passive_8"];
+"wheel_3_passive_9" [label="wheel_3_passive_9"];
+"wheel_4" [label="wheel_4"];
+"wheel_4_passive_0" [label="wheel_4_passive_0"];
+"wheel_4_passive_1" [label="wheel_4_passive_1"];
+"wheel_4_passive_2" [label="wheel_4_passive_2"];
+"wheel_4_passive_3" [label="wheel_4_passive_3"];
+"wheel_4_passive_4" [label="wheel_4_passive_4"];
+"wheel_4_passive_5" [label="wheel_4_passive_5"];
+"wheel_4_passive_6" [label="wheel_4_passive_6"];
+"wheel_4_passive_7" [label="wheel_4_passive_7"];
+"wheel_4_passive_8" [label="wheel_4_passive_8"];
+"wheel_4_passive_9" [label="wheel_4_passive_9"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "base_footprint_joint" [label="xyz: 0 0 -0.028166 \nrpy: 0 -0 0"]
+"base_footprint_joint" -> "base_footprint"
+"base_link" -> "omni_chassis_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"omni_chassis_joint" -> "omni_chassis_base_link"
+"omni_chassis_base_link" -> "chassis_lidar_joint" [label="xyz: 0.235 0 0.2144 \nrpy: 0 -0 0"]
+"chassis_lidar_joint" -> "chassis_lidar"
+"omni_chassis_base_link" -> "omni_chassis_leg_mount_joint" [label="xyz: 0.134 0 0.1325 \nrpy: 0 -0 0"]
+"omni_chassis_leg_mount_joint" -> "omni_chassis_leg_mount_link"
+"omni_chassis_leg_mount_link" -> "leg_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"leg_joint" -> "leg_base_link"
+"leg_base_link" -> "leg_joint1" [label="xyz: 0 0 0 \nrpy: 1.5708 -0.385 3.14159"]
+"leg_joint1" -> "leg_link1"
+"leg_link1" -> "leg_joint2" [label="xyz: 0.45 0 0 \nrpy: 3.14159 -2.72935e-33 2.7566"]
+"leg_joint2" -> "leg_link2"
+"leg_link2" -> "leg_joint3" [label="xyz: 0.39 0 0 \nrpy: 3.14159 -3.00808e-49 3.14159"]
+"leg_joint3" -> "leg_link3"
+"leg_link3" -> "leg_joint4" [label="xyz: 0 0.224 0 \nrpy: 0 -1.5708 -1.5708"]
+"leg_joint4" -> "leg_link4"
+"leg_link4" -> "leg_joint5" [label="xyz: 0 0 0 \nrpy: 1.5708 -0 0"]
+"leg_joint5" -> "leg_link5"
+"leg_link5" -> "leg_end_effector_mount_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"leg_end_effector_mount_joint" -> "leg_end_effector_mount_link"
+"leg_end_effector_mount_link" -> "torso_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"torso_joint" -> "torso_base_link"
+"torso_base_link" -> "torso_head_mount_joint" [label="xyz: 0 0.37711 0 \nrpy: 0 -1.5708 -1.5708"]
+"torso_head_mount_joint" -> "torso_head_mount_link"
+"torso_head_mount_link" -> "head_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"head_joint" -> "head_base_link"
+"head_base_link" -> "head_joint1" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"head_joint1" -> "head_link1"
+"head_link1" -> "head_joint2" [label="xyz: 0 0 0 \nrpy: -1.5708 0 0"]
+"head_joint2" -> "head_link2"
+"head_link2" -> "head_end_effector_mount_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"head_end_effector_mount_joint" -> "head_end_effector_mount_link"
+"torso_base_link" -> "torso_left_arm_mount_joint" [label="xyz: 0.20843 0.172 0 \nrpy: 0 1.5708 -0"]
+"torso_left_arm_mount_joint" -> "torso_left_arm_mount_link"
+"torso_left_arm_mount_link" -> "left_arm_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"left_arm_joint" -> "left_arm_base_link"
+"left_arm_base_link" -> "left_arm_joint1" [label="xyz: 0 0 0 \nrpy: 0 -0 0.523599"]
+"left_arm_joint1" -> "left_arm_link1"
+"left_arm_link1" -> "left_arm_joint2" [label="xyz: 0 0 0 \nrpy: 1.5708 -2.97373e-32 3.14159"]
+"left_arm_joint2" -> "left_arm_link2"
+"left_arm_link2" -> "left_arm_joint3" [label="xyz: 0 0.35 0 \nrpy: 1.5708 1.0472 -3.14159"]
+"left_arm_joint3" -> "left_arm_link3"
+"left_arm_link3" -> "left_arm_joint4" [label="xyz: 0 0 0 \nrpy: 1.5708 -1.03424e-31 3.14159"]
+"left_arm_joint4" -> "left_arm_link4"
+"left_arm_link4" -> "left_arm_joint5" [label="xyz: 0 0.36 0 \nrpy: -1.5708 0 0"]
+"left_arm_joint5" -> "left_arm_link5"
+"left_arm_link5" -> "left_arm_joint6" [label="xyz: 0 0 0 \nrpy: 0 1.5708 -1.5708"]
+"left_arm_joint6" -> "left_arm_link6"
+"left_arm_link6" -> "left_arm_joint7" [label="xyz: 0 0 0 \nrpy: 1.5708 -0 0"]
+"left_arm_joint7" -> "left_arm_link7"
+"left_arm_link7" -> "left_arm_camera_stand_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"left_arm_camera_stand_joint" -> "left_arm_wrist_camera_stand"
+"left_arm_wrist_camera_stand" -> "left_arm_camera_joint" [label="xyz: -0.0822 0 -0.06842 \nrpy: -4.65887e-32 1.4808 3.14159"]
+"left_arm_camera_joint" -> "left_wrist_camera_link"
+"left_arm_link7" -> "left_arm_end_effector_mount_joint" [label="xyz: -0.10926 0 0 \nrpy: 3.14159 -3.00808e-49 3.14159"]
+"left_arm_end_effector_mount_joint" -> "left_arm_end_effector_mount_link"
+"left_arm_end_effector_mount_link" -> "left_gripper_mount_joint" [label="xyz: 0 0 0 \nrpy: 1.5708 -0 0"]
+"left_gripper_mount_joint" -> "left_gripper_flange_link"
+"left_gripper_flange_link" -> "left_gripper_base_joint" [label="xyz: 0.0065 0 0 \nrpy: 0 -0 0"]
+"left_gripper_base_joint" -> "left_gripper_base_link"
+"left_gripper_base_link" -> "left_gripper_joint" [label="xyz: 0.0745 0 0.0385 \nrpy: 1.5708 -1.2465 -1.50309e-16"]
+"left_gripper_joint" -> "left_gripper_r_knuckle_link"
+"left_gripper_base_link" -> "left_gripper_l_inner_knuckle_joint" [label="xyz: 0.079 0 -0.026 \nrpy: 1.5708 1.2465 1.50309e-16"]
+"left_gripper_l_inner_knuckle_joint" -> "left_gripper_l_inner_knuckle_link"
+"left_gripper_l_inner_knuckle_link" -> "left_gripper_l_finger_joint" [label="xyz: 0.045 0 0 \nrpy: 0 -0 1.2465"]
+"left_gripper_l_finger_joint" -> "left_gripper_l_finger_link"
+"left_gripper_base_link" -> "left_gripper_l_knuckle_joint" [label="xyz: 0.0745 0 -0.0385 \nrpy: 1.5708 1.2465 1.50309e-16"]
+"left_gripper_l_knuckle_joint" -> "left_gripper_l_knuckle_link"
+"left_gripper_base_link" -> "left_gripper_r_inner_knuckle_joint" [label="xyz: 0.079 0 0.026 \nrpy: 1.5708 -1.2465 -1.50309e-16"]
+"left_gripper_r_inner_knuckle_joint" -> "left_gripper_r_inner_knuckle_link"
+"left_gripper_r_inner_knuckle_link" -> "left_gripper_r_finger_joint" [label="xyz: 0.045 0 0 \nrpy: 0 0 -1.2465"]
+"left_gripper_r_finger_joint" -> "left_gripper_r_finger_link"
+"left_gripper_base_link" -> "left_gripper_tcp_joint" [label="xyz: 0.13996 0 0 \nrpy: -1.5708 0 0"]
+"left_gripper_tcp_joint" -> "left_gripper_tcp_link"
+"torso_base_link" -> "torso_right_arm_mount_joint" [label="xyz: -0.20843 0.172 0 \nrpy: 0 1.5708 -3.14159"]
+"torso_right_arm_mount_joint" -> "torso_right_arm_mount_link"
+"torso_right_arm_mount_link" -> "right_arm_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"right_arm_joint" -> "right_arm_base_link"
+"right_arm_base_link" -> "right_arm_joint1" [label="xyz: 0 0 0 \nrpy: 0 0 -0.523599"]
+"right_arm_joint1" -> "right_arm_link1"
+"right_arm_link1" -> "right_arm_joint2" [label="xyz: 0 0 0 \nrpy: -1.5708 2.97373e-32 3.14159"]
+"right_arm_joint2" -> "right_arm_link2"
+"right_arm_link2" -> "right_arm_joint3" [label="xyz: 0 -0.35 0 \nrpy: -1.5708 1.0472 -3.14159"]
+"right_arm_joint3" -> "right_arm_link3"
+"right_arm_link3" -> "right_arm_joint4" [label="xyz: 0 0 0 \nrpy: -1.5708 1.03424e-31 3.14159"]
+"right_arm_joint4" -> "right_arm_link4"
+"right_arm_link4" -> "right_arm_joint5" [label="xyz: 0 -0.36 0 \nrpy: -1.5708 -1.4553e-31 -3.14159"]
+"right_arm_joint5" -> "right_arm_link5"
+"right_arm_link5" -> "right_arm_joint6" [label="xyz: 0 0 0 \nrpy: 0 1.5708 -1.5708"]
+"right_arm_joint6" -> "right_arm_link6"
+"right_arm_link6" -> "right_arm_joint7" [label="xyz: 0 0 0 \nrpy: -1.5708 0 0"]
+"right_arm_joint7" -> "right_arm_link7"
+"right_arm_link7" -> "right_arm_camera_stand_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"right_arm_camera_stand_joint" -> "right_arm_wrist_camera_stand"
+"right_arm_wrist_camera_stand" -> "right_arm_camera_joint" [label="xyz: -0.0822 0 -0.06842 \nrpy: -4.65887e-32 1.4808 3.14159"]
+"right_arm_camera_joint" -> "right_wrist_camera_link"
+"right_arm_link7" -> "right_arm_end_effector_mount_joint" [label="xyz: -0.10926 0 0 \nrpy: 3.14159 -3.00808e-49 3.14159"]
+"right_arm_end_effector_mount_joint" -> "right_arm_end_effector_mount_link"
+"right_arm_end_effector_mount_link" -> "right_gripper_mount_joint" [label="xyz: 0 0 0 \nrpy: 1.5708 -0 0"]
+"right_gripper_mount_joint" -> "right_gripper_flange_link"
+"right_gripper_flange_link" -> "right_gripper_base_joint" [label="xyz: 0.0065 0 0 \nrpy: 0 -0 0"]
+"right_gripper_base_joint" -> "right_gripper_base_link"
+"right_gripper_base_link" -> "right_gripper_joint" [label="xyz: 0.0745 0 0.0385 \nrpy: 1.5708 -1.2465 -1.50309e-16"]
+"right_gripper_joint" -> "right_gripper_r_knuckle_link"
+"right_gripper_base_link" -> "right_gripper_l_inner_knuckle_joint" [label="xyz: 0.079 0 -0.026 \nrpy: 1.5708 1.2465 1.50309e-16"]
+"right_gripper_l_inner_knuckle_joint" -> "right_gripper_l_inner_knuckle_link"
+"right_gripper_l_inner_knuckle_link" -> "right_gripper_l_finger_joint" [label="xyz: 0.045 0 0 \nrpy: 0 -0 1.2465"]
+"right_gripper_l_finger_joint" -> "right_gripper_l_finger_link"
+"right_gripper_base_link" -> "right_gripper_l_knuckle_joint" [label="xyz: 0.0745 0 -0.0385 \nrpy: 1.5708 1.2465 1.50309e-16"]
+"right_gripper_l_knuckle_joint" -> "right_gripper_l_knuckle_link"
+"right_gripper_base_link" -> "right_gripper_r_inner_knuckle_joint" [label="xyz: 0.079 0 0.026 \nrpy: 1.5708 -1.2465 -1.50309e-16"]
+"right_gripper_r_inner_knuckle_joint" -> "right_gripper_r_inner_knuckle_link"
+"right_gripper_r_inner_knuckle_link" -> "right_gripper_r_finger_joint" [label="xyz: 0.045 0 0 \nrpy: 0 0 -1.2465"]
+"right_gripper_r_finger_joint" -> "right_gripper_r_finger_link"
+"right_gripper_base_link" -> "right_gripper_tcp_joint" [label="xyz: 0.13996 0 0 \nrpy: -1.5708 0 0"]
+"right_gripper_tcp_joint" -> "right_gripper_tcp_link"
+"omni_chassis_base_link" -> "wheel1_joint" [label="xyz: 0.176493 0.176493 0.071834 \nrpy: 0 0 -2.35619"]
+"wheel1_joint" -> "wheel_1"
+"wheel_1" -> "wheel_1_passive_0_joint" [label="xyz: 0 0.025 0 \nrpy: 0 -0 0"]
+"wheel_1_passive_0_joint" -> "wheel_1_passive_0"
+"wheel_1" -> "wheel_1_passive_1_joint" [label="xyz: 0 0.0202254 0.0146946 \nrpy: 0.628319 -0 0"]
+"wheel_1_passive_1_joint" -> "wheel_1_passive_1"
+"wheel_1" -> "wheel_1_passive_2_joint" [label="xyz: 0 0.00772542 0.0237764 \nrpy: 1.25664 -0 0"]
+"wheel_1_passive_2_joint" -> "wheel_1_passive_2"
+"wheel_1" -> "wheel_1_passive_3_joint" [label="xyz: 0 -0.00772542 0.0237764 \nrpy: 1.88496 -0 0"]
+"wheel_1_passive_3_joint" -> "wheel_1_passive_3"
+"wheel_1" -> "wheel_1_passive_4_joint" [label="xyz: 0 -0.0202254 0.0146946 \nrpy: 2.51327 -0 0"]
+"wheel_1_passive_4_joint" -> "wheel_1_passive_4"
+"wheel_1" -> "wheel_1_passive_5_joint" [label="xyz: 0 -0.025 3.06162e-18 \nrpy: 3.14159 -0 0"]
+"wheel_1_passive_5_joint" -> "wheel_1_passive_5"
+"wheel_1" -> "wheel_1_passive_6_joint" [label="xyz: 0 -0.0202254 -0.0146946 \nrpy: -2.51327 -0 0"]
+"wheel_1_passive_6_joint" -> "wheel_1_passive_6"
+"wheel_1" -> "wheel_1_passive_7_joint" [label="xyz: 0 -0.00772542 -0.0237764 \nrpy: -1.88496 -0 0"]
+"wheel_1_passive_7_joint" -> "wheel_1_passive_7"
+"wheel_1" -> "wheel_1_passive_8_joint" [label="xyz: 0 0.00772542 -0.0237764 \nrpy: -1.25664 -0 0"]
+"wheel_1_passive_8_joint" -> "wheel_1_passive_8"
+"wheel_1" -> "wheel_1_passive_9_joint" [label="xyz: 0 0.0202254 -0.0146946 \nrpy: -0.628319 -0 0"]
+"wheel_1_passive_9_joint" -> "wheel_1_passive_9"
+"omni_chassis_base_link" -> "wheel2_joint" [label="xyz: -0.176493 0.176493 0.071834 \nrpy: 0 0 -0.785398"]
+"wheel2_joint" -> "wheel_2"
+"wheel_2" -> "wheel_2_passive_0_joint" [label="xyz: 0 0.025 0 \nrpy: 0 -0 0"]
+"wheel_2_passive_0_joint" -> "wheel_2_passive_0"
+"wheel_2" -> "wheel_2_passive_1_joint" [label="xyz: 0 0.0202254 0.0146946 \nrpy: 0.628319 -0 0"]
+"wheel_2_passive_1_joint" -> "wheel_2_passive_1"
+"wheel_2" -> "wheel_2_passive_2_joint" [label="xyz: 0 0.00772542 0.0237764 \nrpy: 1.25664 -0 0"]
+"wheel_2_passive_2_joint" -> "wheel_2_passive_2"
+"wheel_2" -> "wheel_2_passive_3_joint" [label="xyz: 0 -0.00772542 0.0237764 \nrpy: 1.88496 -0 0"]
+"wheel_2_passive_3_joint" -> "wheel_2_passive_3"
+"wheel_2" -> "wheel_2_passive_4_joint" [label="xyz: 0 -0.0202254 0.0146946 \nrpy: 2.51327 -0 0"]
+"wheel_2_passive_4_joint" -> "wheel_2_passive_4"
+"wheel_2" -> "wheel_2_passive_5_joint" [label="xyz: 0 -0.025 3.06162e-18 \nrpy: 3.14159 -0 0"]
+"wheel_2_passive_5_joint" -> "wheel_2_passive_5"
+"wheel_2" -> "wheel_2_passive_6_joint" [label="xyz: 0 -0.0202254 -0.0146946 \nrpy: -2.51327 -0 0"]
+"wheel_2_passive_6_joint" -> "wheel_2_passive_6"
+"wheel_2" -> "wheel_2_passive_7_joint" [label="xyz: 0 -0.00772542 -0.0237764 \nrpy: -1.88496 -0 0"]
+"wheel_2_passive_7_joint" -> "wheel_2_passive_7"
+"wheel_2" -> "wheel_2_passive_8_joint" [label="xyz: 0 0.00772542 -0.0237764 \nrpy: -1.25664 -0 0"]
+"wheel_2_passive_8_joint" -> "wheel_2_passive_8"
+"wheel_2" -> "wheel_2_passive_9_joint" [label="xyz: 0 0.0202254 -0.0146946 \nrpy: -0.628319 -0 0"]
+"wheel_2_passive_9_joint" -> "wheel_2_passive_9"
+"omni_chassis_base_link" -> "wheel3_joint" [label="xyz: -0.176493 -0.176493 0.071834 \nrpy: 0 -0 0.785398"]
+"wheel3_joint" -> "wheel_3"
+"wheel_3" -> "wheel_3_passive_0_joint" [label="xyz: 0 0.025 0 \nrpy: 0 -0 0"]
+"wheel_3_passive_0_joint" -> "wheel_3_passive_0"
+"wheel_3" -> "wheel_3_passive_1_joint" [label="xyz: 0 0.0202254 0.0146946 \nrpy: 0.628319 -0 0"]
+"wheel_3_passive_1_joint" -> "wheel_3_passive_1"
+"wheel_3" -> "wheel_3_passive_2_joint" [label="xyz: 0 0.00772542 0.0237764 \nrpy: 1.25664 -0 0"]
+"wheel_3_passive_2_joint" -> "wheel_3_passive_2"
+"wheel_3" -> "wheel_3_passive_3_joint" [label="xyz: 0 -0.00772542 0.0237764 \nrpy: 1.88496 -0 0"]
+"wheel_3_passive_3_joint" -> "wheel_3_passive_3"
+"wheel_3" -> "wheel_3_passive_4_joint" [label="xyz: 0 -0.0202254 0.0146946 \nrpy: 2.51327 -0 0"]
+"wheel_3_passive_4_joint" -> "wheel_3_passive_4"
+"wheel_3" -> "wheel_3_passive_5_joint" [label="xyz: 0 -0.025 3.06162e-18 \nrpy: 3.14159 -0 0"]
+"wheel_3_passive_5_joint" -> "wheel_3_passive_5"
+"wheel_3" -> "wheel_3_passive_6_joint" [label="xyz: 0 -0.0202254 -0.0146946 \nrpy: -2.51327 -0 0"]
+"wheel_3_passive_6_joint" -> "wheel_3_passive_6"
+"wheel_3" -> "wheel_3_passive_7_joint" [label="xyz: 0 -0.00772542 -0.0237764 \nrpy: -1.88496 -0 0"]
+"wheel_3_passive_7_joint" -> "wheel_3_passive_7"
+"wheel_3" -> "wheel_3_passive_8_joint" [label="xyz: 0 0.00772542 -0.0237764 \nrpy: -1.25664 -0 0"]
+"wheel_3_passive_8_joint" -> "wheel_3_passive_8"
+"wheel_3" -> "wheel_3_passive_9_joint" [label="xyz: 0 0.0202254 -0.0146946 \nrpy: -0.628319 -0 0"]
+"wheel_3_passive_9_joint" -> "wheel_3_passive_9"
+"omni_chassis_base_link" -> "wheel4_joint" [label="xyz: 0.176493 -0.176493 0.071834 \nrpy: 0 -0 2.35619"]
+"wheel4_joint" -> "wheel_4"
+"wheel_4" -> "wheel_4_passive_0_joint" [label="xyz: 0 0.025 0 \nrpy: 0 -0 0"]
+"wheel_4_passive_0_joint" -> "wheel_4_passive_0"
+"wheel_4" -> "wheel_4_passive_1_joint" [label="xyz: 0 0.0202254 0.0146946 \nrpy: 0.628319 -0 0"]
+"wheel_4_passive_1_joint" -> "wheel_4_passive_1"
+"wheel_4" -> "wheel_4_passive_2_joint" [label="xyz: 0 0.00772542 0.0237764 \nrpy: 1.25664 -0 0"]
+"wheel_4_passive_2_joint" -> "wheel_4_passive_2"
+"wheel_4" -> "wheel_4_passive_3_joint" [label="xyz: 0 -0.00772542 0.0237764 \nrpy: 1.88496 -0 0"]
+"wheel_4_passive_3_joint" -> "wheel_4_passive_3"
+"wheel_4" -> "wheel_4_passive_4_joint" [label="xyz: 0 -0.0202254 0.0146946 \nrpy: 2.51327 -0 0"]
+"wheel_4_passive_4_joint" -> "wheel_4_passive_4"
+"wheel_4" -> "wheel_4_passive_5_joint" [label="xyz: 0 -0.025 3.06162e-18 \nrpy: 3.14159 -0 0"]
+"wheel_4_passive_5_joint" -> "wheel_4_passive_5"
+"wheel_4" -> "wheel_4_passive_6_joint" [label="xyz: 0 -0.0202254 -0.0146946 \nrpy: -2.51327 -0 0"]
+"wheel_4_passive_6_joint" -> "wheel_4_passive_6"
+"wheel_4" -> "wheel_4_passive_7_joint" [label="xyz: 0 -0.00772542 -0.0237764 \nrpy: -1.88496 -0 0"]
+"wheel_4_passive_7_joint" -> "wheel_4_passive_7"
+"wheel_4" -> "wheel_4_passive_8_joint" [label="xyz: 0 0.00772542 -0.0237764 \nrpy: -1.25664 -0 0"]
+"wheel_4_passive_8_joint" -> "wheel_4_passive_8"
+"wheel_4" -> "wheel_4_passive_9_joint" [label="xyz: 0 0.0202254 -0.0146946 \nrpy: -0.628319 -0 0"]
+"wheel_4_passive_9_joint" -> "wheel_4_passive_9"
+}
