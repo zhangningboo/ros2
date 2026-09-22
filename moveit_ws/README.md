@@ -33,3 +33,5 @@ https://moveit.picknik.ai/main/doc/examples/urdf_srdf/urdf_srdf_tutorial.html
     -  启动配置助手： `ros2 launch moveit_setup_assistant setup_assistant.launch.py`
     - 使用的urdf文件是：`src/galbot_one_golf_description/urdf/galbot_one_golf.urdf`
 - 验证配置结果：`ros2 launch galbot_one_golf_moveit_config demo.launch.py`
+
+

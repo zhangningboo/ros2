@@ -1,0 +1,2 @@
+[patch.crates-io.rust_moveit_demo]
+path = "/data/galbot/cuihu-env/workspace/ros2/moveit_ws/install/rust_moveit_demo/share/rust_moveit_demo/rust"
