@@ -2,10 +2,16 @@
     "ROS2.distro": "humble",
     "python.autoComplete.extraPaths": [
         "/opt/ros/humble/lib/python3.10/site-packages",
-        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+        "/opt/ros/humble/local/lib/python3.10/dist-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
     ],
     "rust-analyzer.check.command": "clippy",
     "rust-analyzer.linkedProjects": [
 	    "step3-node/dev_ws/src/hello_pkg_rs/Cargo.toml"
-	]
+    ]
 }

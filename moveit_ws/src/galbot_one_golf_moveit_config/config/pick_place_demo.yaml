@@ -1,0 +1,38 @@
+# Mock-hardware motion example; no physical object is simulated.
+# pose: [x, y, z, qx, qy, qz, qw], metres and quaternion, in frame_id.
+# Alternatively: joints: [j1, j2, j3, j4, j5, j6, j7], radians.
+# Gripper values are revolute joint angles (rad), not opening widths.
+frame_id: base_link
+velocity_scaling: 0.8
+acceleration_scaling: 0.8
+arms:
+  left:
+    tcp_link: left_gripper_tcp_link
+    gripper: {open: 0.0, closed: 0.6}
+    pre_pick:
+      pose: [-0.050637, 1.14665, 0.646521, 0.258074, 0.441097, 0.65833, 0.55266]
+    pick:
+      pose: [-0.050637, 1.14665, 0.606521, 0.258074, 0.441097, 0.65833, 0.55266]
+    lift:
+      pose: [-0.050637, 1.14665, 0.646521, 0.258074, 0.441097, 0.65833, 0.55266]
+    pre_place:
+      pose: [-0.074963, 1.14665, 0.733207, 0.412924, 0.564115, 0.574015, 0.42635]
+    place:
+      pose: [-0.074963, 1.14665, 0.693207, 0.412924, 0.564115, 0.574015, 0.42635]
+    retreat:
+      pose: [-0.074963, 1.14665, 0.733207, 0.412924, 0.564115, 0.574015, 0.42635]
+  right:
+    tcp_link: right_gripper_tcp_link
+    gripper: {open: 0.0, closed: 0.6}
+    pre_pick:
+      pose: [-0.050637, -1.14665, 0.646521, -0.258074, 0.441097, -0.65833, 0.55266]
+    pick:
+      pose: [-0.050637, -1.14665, 0.606521, -0.258074, 0.441097, -0.65833, 0.55266]
+    lift:
+      pose: [-0.050637, -1.14665, 0.646521, -0.258074, 0.441097, -0.65833, 0.55266]
+    pre_place:
+      pose: [-0.074963, -1.14665, 0.733207, 0.412924, -0.564115, 0.574015, -0.42635]
+    place:
+      pose: [-0.074963, -1.14665, 0.693207, 0.412924, -0.564115, 0.574015, -0.42635]
+    retreat:
+      pose: [-0.074963, -1.14665, 0.733207, 0.412924, -0.564115, 0.574015, -0.42635]

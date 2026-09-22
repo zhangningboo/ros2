@@ -1,0 +1,44 @@
+[package]
+name = "rust_moveit_demo"
+version = "0.0.1"
+authors = ["galbot <galbot@todo.todo>"]
+edition = "2021"
+
+[[bin]]
+name = "rust_moveit_demo"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = {version = "1", features = ["backtrace"]}
+rclrs = "*"
+
+# This specific version is compatible with Rust 1.75
+backtrace = "=0.3.74"
+
+# ROS Dependencies
+std_msgs = { path = "/opt/ros/jazzy/share/std_msgs/rust" }
+geometry_msgs = { path = "/opt/ros/jazzy/share/geometry_msgs/rust" }
+moveit_msgs = { path = "/opt/ros/jazzy/share/moveit_msgs/rust" }
+trajectory_msgs = { path = "/opt/ros/jazzy/share/trajectory_msgs/rust" }
+action_msgs = { path = "/opt/ros/jazzy/share/action_msgs/rust" }
+service_msgs = { path = "/opt/ros/jazzy/share/service_msgs/rust" }
+shape_msgs = { path = "/opt/ros/jazzy/share/shape_msgs/rust" }
+
+# uncomment the following section in order to fill in
+# further dependencies manually.
+# <dependency> = "*" 
+
+[patch.crates-io]
+# ROS Dependencies
+builtin_interfaces = { path = "/opt/ros/jazzy/share/builtin_interfaces/rust" }
+std_msgs = { path = "/opt/ros/jazzy/share/std_msgs/rust" }
+action_msgs = { path = "/opt/ros/jazzy/share/action_msgs/rust" }
+service_msgs = { path = "/opt/ros/jazzy/share/service_msgs/rust" }
+unique_identifier_msgs = { path = "/opt/ros/jazzy/share/unique_identifier_msgs/rust" }
+geometry_msgs = { path = "/opt/ros/jazzy/share/geometry_msgs/rust" }
+moveit_msgs = { path = "/opt/ros/jazzy/share/moveit_msgs/rust" }
+object_recognition_msgs = { path = "/opt/ros/jazzy/share/object_recognition_msgs/rust" }
+octomap_msgs = { path = "/opt/ros/jazzy/share/octomap_msgs/rust" }
+sensor_msgs = { path = "/opt/ros/jazzy/share/sensor_msgs/rust" }
+shape_msgs = { path = "/opt/ros/jazzy/share/shape_msgs/rust" }
+trajectory_msgs = { path = "/opt/ros/jazzy/share/trajectory_msgs/rust" }

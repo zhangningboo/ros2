@@ -1,0 +1,26 @@
+# Initial joint positions (radians) for the mock-hardware demo.
+# Order: leg (5), head (2), left_arm (7), right_arm (7).
+initial_positions:
+  leg_joint1: 0.5
+  leg_joint2: 1.15
+  leg_joint3: 0.67
+  leg_joint4: 0.0
+  leg_joint5: 0.0
+  head_joint1: 0.0
+  head_joint2: 0.28
+  left_arm_joint1: 1.6985455751419067
+  left_arm_joint2: -1.3854494094848633
+  left_arm_joint3: -0.454298734664917
+  left_arm_joint4: -2.0751876831054688
+  left_arm_joint5: -0.030176742002367973
+  left_arm_joint6: -0.40168577432632446
+  left_arm_joint7: -0.1434992253780365
+  right_arm_joint1: -1.7824610471725464
+  right_arm_joint2: 1.2597332000732422
+  right_arm_joint3: 0.39703619480133057
+  right_arm_joint4: 2.194383144378662
+  right_arm_joint5: 0.07425503432750702
+  right_arm_joint6: 0.2792317271232605
+  right_arm_joint7: 0.20732764899730682
+  left_gripper_joint: 0
+  right_gripper_joint: 0
