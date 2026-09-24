@@ -1,5 +1,33 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <!-- State-only joints for the stationary chassis in the mock arm demo.
+         Publish wheel and roller positions through joint_state_broadcaster so
+         robot_state_publisher can produce the complete wheel TF subtrees. -->
+    <xacro:macro name="galbot_stationary_joint" params="joint_name">
+        <joint name="${joint_name}">
+            <state_interface name="position">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+            <state_interface name="velocity">
+                <param name="initial_value">0.0</param>
+            </state_interface>
+        </joint>
+    </xacro:macro>
+
+    <xacro:macro name="galbot_stationary_wheel" params="index">
+        <xacro:galbot_stationary_joint joint_name="wheel${index}_joint"/>
+        <xacro:galbot_stationary_joint joint_name="wheel_${index}_passive_0_joint"/>
+        <xacro:galbot_stationary_joint joint_name="wheel_${index}_passive_1_joint"/>
+        <xacro:galbot_stationary_joint joint_name="wheel_${index}_passive_2_joint"/>
+        <xacro:galbot_stationary_joint joint_name="wheel_${index}_passive_3_joint"/>
+        <xacro:galbot_stationary_joint joint_name="wheel_${index}_passive_4_joint"/>
+        <xacro:galbot_stationary_joint joint_name="wheel_${index}_passive_5_joint"/>
+        <xacro:galbot_stationary_joint joint_name="wheel_${index}_passive_6_joint"/>
+        <xacro:galbot_stationary_joint joint_name="wheel_${index}_passive_7_joint"/>
+        <xacro:galbot_stationary_joint joint_name="wheel_${index}_passive_8_joint"/>
+        <xacro:galbot_stationary_joint joint_name="wheel_${index}_passive_9_joint"/>
+    </xacro:macro>
+
     <xacro:macro name="galbot_one_golf_ros2_control" params="name initial_positions_file">
         <xacro:property name="initial_positions" value="${xacro.load_yaml(initial_positions_file)['initial_positions']}"/>
 
@@ -8,6 +36,11 @@
                 <!-- By default, set up controllers for simulation. This won't work on real hardware -->
                 <plugin>mock_components/GenericSystem</plugin>
             </hardware>
+            <xacro:galbot_stationary_wheel index="1"/>
+            <xacro:galbot_stationary_wheel index="2"/>
+            <xacro:galbot_stationary_wheel index="3"/>
+            <xacro:galbot_stationary_wheel index="4"/>
+
             <!-- Passive planning joints: publish their configured positions so
                  RViz, TF and MoveIt use the same leg/head posture. -->
             <joint name="leg_joint1">

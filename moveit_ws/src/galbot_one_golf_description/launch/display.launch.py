@@ -1,9 +1,10 @@
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, OpaqueFunction
+from launch.actions import DeclareLaunchArgument, GroupAction, OpaqueFunction
 from launch.conditions import IfCondition, UnlessCondition
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
+import xacro
 
 
 PACKAGE_NAME = "galbot_one_golf_description"
@@ -18,8 +19,11 @@ def launch_setup(context, *args, **kwargs):
     use_gui = LaunchConfiguration("gui")
     urdf_path = LaunchConfiguration("urdf_path")
     urdf_file = urdf_path.perform(context) or default_urdf_path.perform(context)
-    with open(urdf_file, "r", encoding="utf-8") as f:
-        robot_description_content = f.read()
+    if urdf_file.endswith(".xacro"):
+        robot_description_content = xacro.process_file(urdf_file).toxml()
+    else:
+        with open(urdf_file, "r", encoding="utf-8") as f:
+            robot_description_content = f.read()
 
     # The generated URDF stores portable relative mesh paths ("meshes/...").
     # RViz receives the URDF over the /robot_description topic and cannot
@@ -39,17 +43,22 @@ def launch_setup(context, *args, **kwargs):
             parameters=[robot_description],
             output="screen",
         ),
-        Node(
-            package="joint_state_publisher_gui",
-            executable="joint_state_publisher_gui",
-            condition=IfCondition(use_gui),
-            output="screen",
-        ),
-        Node(
-            package="joint_state_publisher",
-            executable="joint_state_publisher",
-            condition=UnlessCondition(use_gui),
-            output="screen",
+        GroupAction(
+            condition=IfCondition(LaunchConfiguration("publish_joint_states")),
+            actions=[
+                Node(
+                    package="joint_state_publisher_gui",
+                    executable="joint_state_publisher_gui",
+                    condition=IfCondition(use_gui),
+                    output="screen",
+                ),
+                Node(
+                    package="joint_state_publisher",
+                    executable="joint_state_publisher",
+                    condition=UnlessCondition(use_gui),
+                    output="screen",
+                ),
+            ],
         ),
         Node(
             package="rviz2",
@@ -69,7 +78,12 @@ def generate_launch_description():
                 "urdf",
                 "galbot_one_golf.urdf",
             ]),
-            description="Absolute path to the URDF file to display.",
+            description="Absolute path to the URDF or xacro file to display.",
+        ),
+        DeclareLaunchArgument(
+            "publish_joint_states",
+            default_value="true",
+            description="Disable both joint state publishers when ros2_control provides joint states.",
         ),
         DeclareLaunchArgument(
             "gui",
